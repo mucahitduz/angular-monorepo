@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const greet = name => {\n  return `Hello, ${name}!`;\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

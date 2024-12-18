@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "projects": {
+    "angular-project-1": {
+      "projectType": "application",
+      "root": "apps/angular-project-1",
+      "sourceRoot": "apps/angular-project-1/src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/angular-project-1",
+            "index": "apps/angular-project-1/src/index.html",
+            "main": "apps/angular-project-1/src/main.ts",
+            "polyfills": "apps/angular-project-1/src/polyfills.ts",
+            "tsConfig": "apps/angular-project-1/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/angular-project-1/src/favicon.ico",
+              "apps/angular-project-1/src/assets"
+            ],
+            "styles": ["apps/angular-project-1/src/styles.scss"]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/angular-project-1/src/environments/environment.ts",
+                  "with": "apps/angular-project-1/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "angular-project-1:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "angular-project-1:build:production"
+            }
+          }
+        }
+      }
+    },
+    "angular-project-2": {
+      "projectType": "application",
+      "root": "apps/angular-project-2",
+      "sourceRoot": "apps/angular-project-2/src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/angular-project-2",
+            "index": "apps/angular-project-2/src/index.html",
+            "main": "apps/angular-project-2/src/main.ts",
+            "polyfills": "apps/angular-project-2/src/polyfills.ts",
+            "tsConfig": "apps/angular-project-2/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/angular-project-2/src/favicon.ico",
+              "apps/angular-project-2/src/assets"
+            ],
+            "styles": ["apps/angular-project-2/src/styles.scss"]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/angular-project-2/src/environments/environment.ts",
+                  "with": "apps/angular-project-2/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "angular-project-2:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "angular-project-2:build:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angular-project-1"
+}
